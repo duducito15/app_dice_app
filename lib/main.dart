@@ -21,7 +21,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int dadoIzq = 1;
-  int dadoDer = 4;
+  int dadoDer = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +40,8 @@ class _HomePageState extends State<HomePage> {
               flex: 1,
               child: TextButton(
                 onPressed: () {
-                  print("Dado izquierdo");
                   dadoIzq = 4;
-                  print(dadoIzq);
+                  setState(() {});
                 },
                 child: Image.asset("assets/images/dice$dadoIzq.png"),
               ),
@@ -51,7 +50,8 @@ class _HomePageState extends State<HomePage> {
               flex: 1,
               child: TextButton(
                 onPressed: () {
-                  print("Dado derecho");
+                  dadoDer = 3;
+                  setState(() {});
                 },
                 child: Image.asset("assets/images/dice$dadoDer.png"),
               ),
