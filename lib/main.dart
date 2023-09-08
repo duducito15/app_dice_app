@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -40,7 +42,8 @@ class _HomePageState extends State<HomePage> {
               flex: 1,
               child: TextButton(
                 onPressed: () {
-                  dadoIzq = 4;
+                  dadoIzq = Random().nextInt(6) + 1;
+                  dadoDer = Random().nextInt(6) + 1;
                   setState(() {});
                 },
                 child: Image.asset("assets/images/dice$dadoIzq.png"),
@@ -50,7 +53,8 @@ class _HomePageState extends State<HomePage> {
               flex: 1,
               child: TextButton(
                 onPressed: () {
-                  dadoDer = 3;
+                  dadoIzq = Random().nextInt(6) + 1;
+                  dadoDer = Random().nextInt(6) + 1;
                   setState(() {});
                 },
                 child: Image.asset("assets/images/dice$dadoDer.png"),
